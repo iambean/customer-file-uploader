@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<style>
+    button{ font-size:2em; position: fixed; top:50%;left:50%;width:3em;}
+    input{position: fixed;top:0;right:0;display: none;}
+</style>
+<button>Click</button>
+<input type="file" />
+
+<script>
+    /**
+     * dom代理，点击一个button， 让其click事件转到隐藏的input:file上。
+     */
+    var bt = document.getElementsByTagName('button')[0],
+        filebt = document.getElementsByTagName('input')[0];
+
+    bt.onclick = function(){
+        filebt.click();
+    }
+</script>
